@@ -3,6 +3,21 @@ module Timespace
 
 %default total
 
+{-
+
+'time' is a property of individual type variables.
+A time interpreter should take a valuation of the set of variables in a type
+to a new valuation of the same set, ie. a function from each type variable
+to the number of steps required to observe an element of that type in the
+larger structure.
+
+'space', on the other hand, is a property of the larger structure, not of substructures.
+A space interpreter should take an expression representing the space required to store
+the input structure to an expression representing the space required for the output structure.
+The valuation for the space required for each variable remains constant.
+
+-}
+
 data T
   = Zero
   | One
